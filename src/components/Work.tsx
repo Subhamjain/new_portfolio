@@ -19,7 +19,7 @@ const projects = [
   {
     title: "Chat",
     category: "Realtime Chat Application",
-    tools: "Next.js, Node.js, MongoDB, Socket.io, Redis, Microservices",
+    tools: "Next.js, Node.js, MongoDB, Socket.io, Redis",
     image: "/images/realtime.png",
   },
   {
