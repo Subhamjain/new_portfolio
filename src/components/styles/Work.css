@@ -13,7 +13,7 @@
   margin-bottom: 50px;
 }
 
-.work-section h2>span {
+.work-section h2 > span {
   color: var(--accentColor);
 }
 
@@ -32,6 +32,7 @@
   width: 100%;
   border-top: 1px solid #363636;
   border-bottom: 1px solid #363636;
+  touch-action: pan-y;
 }
 
 .carousel-track {
@@ -203,7 +204,8 @@
   justify-content: center;
   align-items: center;
   font-size: 25px;
-  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5),
+  box-shadow:
+    0px 0px 10px 0px rgba(255, 255, 255, 0.5),
     inset 0px 0px 10px 0px #393939;
   transition: 0.3s;
   opacity: 0;
@@ -327,5 +329,43 @@
 
   .work-image img {
     max-height: 250px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel-arrow {
+    display: none;
+  }
+
+  .carousel-slide {
+    padding: 20px 0;
+  }
+
+  .carousel-number h3 {
+    font-size: 28px;
+  }
+
+  .carousel-details h4 {
+    font-size: 18px;
+  }
+
+  .carousel-category {
+    font-size: 14px;
+  }
+
+  .carousel-tools .tools-label {
+    font-size: 12px;
+  }
+
+  .carousel-tools p {
+    font-size: 13px;
+  }
+
+  .carousel-info {
+    gap: 15px;
+  }
+
+  .work-image img {
+    max-height: 200px;
   }
 }
