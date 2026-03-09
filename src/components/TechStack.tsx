@@ -18,7 +18,6 @@ const imageUrls = [
   "/images/node2.webp",
   "/images/express.webp",
   "/images/mongo.webp",
-  "/images/mysql.webp",
   "/images/typescript.webp",
   "/images/javascript.webp",
 ];
@@ -57,8 +56,8 @@ function SphereGeo({
         new THREE.Vector3(
           -50 * delta * scale,
           -150 * delta * scale,
-          -50 * delta * scale
-        )
+          -50 * delta * scale,
+        ),
       );
 
     api.current?.applyImpulse(impulse, true);
@@ -105,9 +104,9 @@ function Pointer({ vec = new THREE.Vector3(), isActive }: PointerProps) {
       new THREE.Vector3(
         (pointer.x * viewport.width) / 2,
         (pointer.y * viewport.height) / 2,
-        0
+        0,
       ),
-      0.2
+      0.2,
     );
     ref.current?.setNextKinematicTranslation(targetVec);
   });
@@ -162,7 +161,7 @@ const TechStack = () => {
           metalness: 0.5,
           roughness: 1,
           clearcoat: 0.1,
-        })
+        }),
     );
   }, []);
 

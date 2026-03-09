@@ -5,34 +5,34 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "Solid Starters",
-    category: "Low-Code Platform",
-    tools: "Angular, Next.js, NestJS, MongoDB",
-    image: "/images/Solidx.png",
+    title: "Signedly",
+    category: "Digital Signature Platform",
+    tools: "React.js, TypeScript, Redux",
+    image: "/images/signedly.png",
   },
   {
-    title: "Radix",
-    category: "E-Commerce",
-    tools: "Angular, Next.js, NestJS, CMS",
-    image: "/images/radix.png",
+    title: "Blockly",
+    category: "Educational Platform",
+    tools: "React.js, TypeScript, Babylon.js",
+    image: "/images/blockly.png",
   },
   {
-    title: "Bond Cancellation",
-    category: "Import-Export Automation",
-    tools: "Angular, Next.js, NestJS, Workflows",
-    image: "/images/bond.png",
+    title: "Chat",
+    category: "Realtime Chat Application",
+    tools: "Next.js, Node.js, MongoDB, Socket.io, Redis, Microservices",
+    image: "/images/realtime.png",
   },
   {
-    title: "Sapphire",
-    category: "CRM Platform",
-    tools: "AngularJS, NestJS, PostgreSQL",
-    image: "/images/sapphire.png",
+    title: "Ai Carreer Coach",
+    category: "AI Career Coach",
+    tools: "Next.js, Gemini",
+    image: "/images/carrer.png",
   },
   {
-    title: "Mpro",
-    category: "Insurance Platform",
-    tools: "React.js, Node.js, Microservices",
-    image: "/images/Maxlife.png",
+    title: "Pharmallama",
+    category: "E-Commerce Pharmacy Platform",
+    tools: "React.js, TypeScript, Redux",
+    image: "/images/pharmallama.png",
   },
 ];
 
@@ -47,7 +47,7 @@ const Work = () => {
       setCurrentIndex(index);
       setTimeout(() => setIsAnimating(false), 500);
     },
-    [isAnimating]
+    [isAnimating],
   );
 
   const goToPrev = useCallback(() => {
@@ -105,9 +105,7 @@ const Work = () => {
                       </div>
                       <div className="carousel-details">
                         <h4>{project.title}</h4>
-                        <p className="carousel-category">
-                          {project.category}
-                        </p>
+                        <p className="carousel-category">{project.category}</p>
                         <div className="carousel-tools">
                           <span className="tools-label">Tools & Features</span>
                           <p>{project.tools}</p>
@@ -128,8 +126,9 @@ const Work = () => {
             {projects.map((_, index) => (
               <button
                 key={index}
-                className={`carousel-dot ${index === currentIndex ? "carousel-dot-active" : ""
-                  }`}
+                className={`carousel-dot ${
+                  index === currentIndex ? "carousel-dot-active" : ""
+                }`}
                 onClick={() => goToSlide(index)}
                 aria-label={`Go to project ${index + 1}`}
                 data-cursor="disable"

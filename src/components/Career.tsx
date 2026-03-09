@@ -15,43 +15,31 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Full Stack Developer</h4>
-                <h5>Ikshan</h5>
+                <h4>Software Engineer</h4>
+                <h5>Reckonsys Tech Labs Pvt Ltd</h5>
               </div>
               <h3>2020</h3>
             </div>
             <p>
-              Built 6+ complete applications using React.js. Integrated backend
-              authentication using Node.js & MongoDB. Created responsive UI/UX
-              and designed wireframes using Figma.
+              Developed scalable SaaS applications using React.js, and
+              TypeScript. Integrated backend services and REST APIs. Built
+              responsive UI systems and collaborated on product wireframes and
+              design workflows using Figma.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Senior Full Stack Developer</h4>
-                <h5>Monocept (Max Life Insurance)</h5>
+                <h4>Senior Software Engineer</h4>
+                <h5>Reckonsys Tech Labs Pvt Ltd</h5>
               </div>
-              <h3>2021</h3>
+              <h3>2023</h3>
             </div>
             <p>
-              Led two development teams on Mpro, a large-scale insurance
-              operations platform. Developed multiple modules using React.js &
-              migrated critical functionalities to Node.js microservices.
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Full Stack Developer</h4>
-                <h5>Logic Loop</h5>
-              </div>
-              <h3>NOW</h3>
-            </div>
-            <p>
-              Building Solid, a proprietary low-code platform using Angular,
-              Next.js & NestJS. Delivering production-ready CMS-based projects
-              including e-commerce, CRM, and import-export automation systems.
+              Led development teams, optimized frontend performance, automated
+              document workflows reducing paperwork, and developed a 3D robot
+              simulator using React and Babylon.js for visualizing robot
+              movements and collision detection.
             </p>
           </div>
         </div>
