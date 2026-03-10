@@ -7,6 +7,7 @@ import HoverLinks from "./HoverLinks";
 const SocialIcons = () => {
   useEffect(() => {
     const social = document.getElementById("social") as HTMLElement;
+    const cleanups: (() => void)[] = [];
 
     social.querySelectorAll("span").forEach((item) => {
       const elem = item as HTMLElement;
@@ -17,6 +18,7 @@ const SocialIcons = () => {
       let mouseY = rect.height / 2;
       let currentX = 0;
       let currentY = 0;
+      let rafId: number;
 
       const updatePosition = () => {
         currentX += (mouseX - currentX) * 0.1;
@@ -25,7 +27,7 @@ const SocialIcons = () => {
         link.style.setProperty("--siLeft", `${currentX}px`);
         link.style.setProperty("--siTop", `${currentY}px`);
 
-        requestAnimationFrame(updatePosition);
+        rafId = requestAnimationFrame(updatePosition);
       };
 
       const onMouseMove = (e: MouseEvent) => {
@@ -42,13 +44,17 @@ const SocialIcons = () => {
       };
 
       document.addEventListener("mousemove", onMouseMove);
+      rafId = requestAnimationFrame(updatePosition);
 
-      updatePosition();
-
-      return () => {
-        elem.removeEventListener("mousemove", onMouseMove);
-      };
+      cleanups.push(() => {
+        cancelAnimationFrame(rafId);
+        document.removeEventListener("mousemove", onMouseMove);
+      });
     });
+
+    return () => {
+      cleanups.forEach((cleanup) => cleanup());
+    };
   }, []);
 
   return (
